@@ -1,0 +1,27 @@
+Table users { 
+  id  int [pk]
+  email text
+  nickname text
+  name text
+  password text
+  b_date text
+  phone_number text
+  profile_picture int 
+  
+}
+
+Table photos{
+  id int [pk]
+  base64engine text
+}
+
+Table follows {
+  Following_user int
+  Follow_user int
+  
+}
+
+
+
+
+Ref: "users"."profile_picture" < "photos"."id"

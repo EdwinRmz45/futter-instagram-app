@@ -1,6 +1,6 @@
 import '../models/user.dart';
 
-abstract class UserRepository{
+abstract class UserRepository {
   User add(User newUser);
   User update(User userToUpdate);
   bool remove(int userId);

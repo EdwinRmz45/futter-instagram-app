@@ -1,12 +1,12 @@
 import '../models/like.dart';
 
 abstract class LikeRepository {
-  Like add(Like newLike);
-  Like update(Like likeToUpdate);
-  bool remove(int likeId);
-  Like find(int likeId);
-  List<Like> findAll();
-  List<Like> findByUserId(int userId);
-  List<Like> findByPostId(int postId);
-  List<Like> findByCommentId(int commentId);
+  Future<Like> add(Like newLike);
+  Future<Like> update(Like likeToUpdate);
+  Future<void> remove(int likeId);
+  Future<Like> find(int likeId);
+  Future<List<Like>> findAll();
+  Future<List<Like>> findByUserId(int userId);
+  Future<List<Like>> findByPostId(int postId);
+  //List<Like> findByCommentId(int commentId);
 }

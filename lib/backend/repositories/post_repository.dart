@@ -1,13 +1,12 @@
 import '../models/post.dart';
 
 abstract class PostRepository {
-  Post add(Post newPost);
-  Post update(Post postToUpdate);
-  bool remove(int postId);
-  Post find(int postId);
-  List<Post> findAll();
-  List<Post> findByUserId(int userId);
-  List<Post> findByLikedId(int likeId);
-  List<Post> findByCommentId(int commentId);
-  
+  Future<Post> add(Post newPost);
+  Future<Post> update(Post postToUpdate);
+  Future<void> remove(int postId);
+  Future<Post> find(int postId);
+  Future<List<Post>> findAll();
+  //Future<List<Post>> findByUserId(int userId);
+  //Future<List<Post>> findByLikeId(int likeId);
+  Future<List<Post>> findByCommentId(int commentId);
 }

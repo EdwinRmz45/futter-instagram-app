@@ -1,16 +1,19 @@
-import'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 class Photo {
   int id;
   String url;
+  double width;
+  double height;
 
-  Photo(this.id, this.url);
+  Photo(this.id, this.url, this.width, this.height);
 
   Image get data{
-    return Image.network('https://vignette.wikia.nocookie.net/sonic/images/2/2d/TSR_Sonic.png/revision/latest?cb=20200114015342&path-prefix=es');
+    // This will return an image soon!
+    return Image.network(url);
   }
 
   set data(Image image){
-
+    // This will upload the image to the S3 and DB!
   }
 }
